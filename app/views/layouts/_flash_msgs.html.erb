@@ -1,0 +1,14 @@
+<% flash.each do |type, msgs| %>
+  <div class="flash_msgs flash_msgs_<%= type %>">
+
+    <% if msgs.class == String %>
+      <%= msgs %>
+    <% else %>
+      <% msgs.each do |msg| %>
+        <%= msg %>
+      <% end %>
+    <% end %>
+    
+  </div>
+  <br />
+<% end %>
